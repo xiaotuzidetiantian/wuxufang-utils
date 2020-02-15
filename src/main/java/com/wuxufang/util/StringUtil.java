@@ -1,6 +1,8 @@
 package com.wuxufang.util;
 
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 
 public class StringUtil {
@@ -73,6 +75,21 @@ public class StringUtil {
 			// 定义规则
 			String reg = "\\w+\\@\\w+\\.com|cn";
 			return src.matches(reg);
+		}
+		return false;
+	}
+	
+	//校验传入的参数是否为url
+	public static boolean isHttpUrl(String param) {
+		URL url;
+		
+		try {
+			url = new URL(param);
+			url.openStream();
+			//url合法
+			return true;
+		} catch (Exception e) {
+			System.out.println("连接有误，打开失败!!!");
 		}
 		return false;
 	}

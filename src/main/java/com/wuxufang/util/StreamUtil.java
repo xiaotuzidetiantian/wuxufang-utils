@@ -72,17 +72,17 @@ public class StreamUtil {
 	 * @return
 	 * @return: List<String>
 	 */
-//	public static List<String> readLine(InputStream in) {
-//		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-//		String str = null;
-//		List<String> list = new ArrayList<String>();
-//		try {
-//			while((str = reader.readLine()) != null) {
-//				list.add(str);
-//			}
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return list;
-//	}
+	public static List<String> readLine(InputStream in) {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+		String str = null;
+		List<String> list = new ArrayList<String>();
+		try {
+			while((str = reader.readLine()) != null) {
+				list.add(str);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }

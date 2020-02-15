@@ -53,5 +53,13 @@ public class StringUtilTest {
 		boolean b = StringUtil.isEmail("12324@qq.com");
 		System.out.println(b);
 	}
+	
+	@Test
+	public void testIsHttpUrl() {
+//		String url = "ad";
+		String url = "https://www.baidu.com";
+		boolean b = StringUtil.isHttpUrl(url);
+		System.out.println(b);
+	}
 
 }
